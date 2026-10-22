@@ -54,7 +54,7 @@ def render_header() -> str:
         f'<text class="wordmark" x="{W/2}" y="105" text-anchor="middle" filter="url(#wordGlow)">CREATIVE ZONE</text>'
         f'<text class="wordmarkShade" x="{W/2}" y="105" text-anchor="middle">CREATIVE ZONE</text>'
     )
-    who = f'{CONTENT["name"]} Ã‚Â· {CONTENT["role"]} Ã‚Â· {CONTENT["founder_of"]}'
+    who = f'{CONTENT["name"]} · {CONTENT["role"]} · {CONTENT["founder_of"]}'
     sub = f'<text class="sub" x="{W/2}" y="143" text-anchor="middle">{esc(who)}</text>'
     # Typed roles remain animated, but the new wordmark has clean typography and more breathing room.
     lines = CONTENT["typing"]
@@ -126,8 +126,8 @@ def render_about() -> str:
         chars += ptxt
     y += 2
     for k, v in a["facts"]:
-        add(f'<text class="fk" x="{x}" y="{y}">Ã¢â‚¬Âº {esc(k)}</text><text class="fv" x="{x + 64}" y="{y}">{esc(v)}</text>', 19)
-        chars += k + v + "Ã¢â‚¬Âº"
+        add(f'<text class="fk" x="{x}" y="{y}">› {esc(k)}</text><text class="fv" x="{x + 64}" y="{y}">{esc(v)}</text>', 19)
+        chars += k + v + "›"
     # Footer follows the final row instead of using a fixed baseline that could collide with facts.
     py = max(H - 24, y + 18)
     H = max(H, int(py + 16))

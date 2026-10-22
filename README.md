@@ -16,7 +16,7 @@
 <table>
 <tr>
 <td valign="top"><img src="./miguel-ascii.svg" width="420" alt="Miguel, retrato em ASCII gravado a laser" /></td>
-<td valign="top"><img src="./about.svg" width="420" alt="Sobre: Construo produtos digitais de ponta a ponta: arquitetura de dados, interfaces web, apps mobile e agentes de IA. Integro MCP, automaÃƒÂ§ÃƒÂ£o e infraestrutura para transformar fluxos complexos em ferramentas ÃƒÂºteis. Fundei a Creative Zone, ecossistema de tecnologia e comunidade onde ideias viram software e colaboraÃƒÂ§ÃƒÂ£o." /></td>
+<td valign="top"><img src="./about.svg" width="420" alt="Sobre: Construo produtos digitais de ponta a ponta: arquitetura de dados, interfaces web, apps mobile e agentes de IA. Integro MCP, automação e infraestrutura para transformar fluxos complexos em ferramentas úteis. Fundei a Creative Zone, ecossistema de tecnologia e comunidade onde ideias viram software e colaboração." /></td>
 </tr>
 </table>
 
