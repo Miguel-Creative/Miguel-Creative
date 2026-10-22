@@ -6,7 +6,7 @@
 
 <div align="center">
 
-<img src="./header.svg" width="860" alt="CREATIVE ZONE. Miguel, Desenvolvedor Full Stack e fundador da Creative Zone" />
+<img src="./header.svg" width="860" alt="CREATIVE ZONE. Miguel, Desenvolvedor Full-Stack e fundador da Creative Zone" />
 
 <br>
 <br>
@@ -16,7 +16,7 @@
 <table>
 <tr>
 <td valign="top"><img src="./miguel-ascii.svg" width="420" alt="Miguel, retrato em ASCII gravado a laser" /></td>
-<td valign="top"><img src="./about.svg" width="420" alt="Sobre: Construo produtos de ponta a ponta: do Postgres com RLS ao app Android, passando por servidores MCP que deixam a IA criar, testar e operar software de verdade. Fundei a Creative Zone, organização e comunidade onde uma discussão vira ideia e uma ideia vira projeto, reunindo gente de áreas diferentes para construir junto." /></td>
+<td valign="top"><img src="./about.svg" width="420" alt="Sobre: Desenho e construo produtos digitais de ponta a ponta — da arquitetura PostgreSQL/RLS às interfaces web, apps mobile e agentes de IA. Integro MCP, automação e infraestrutura para transformar fluxos complexos em ferramentas úteis e operáveis. Sou fundador da Creative Zone, um ecossistema de tecnologia e comunidade onde ideias viram software, produtos e colaboração. Trabalho com foco em engenharia pragmática, segurança, experiência de uso e entrega contínua." /></td>
 </tr>
 </table>
 
@@ -35,12 +35,12 @@
 
 <table>
 <tr>
-<td valign="top"><a href="https://github.com/Miguel-Creative/CreativeLovable"><img src="./cards/creative-lovable.svg" width="420" alt="Creative Lovable: Laboratório de criação para IAs via MCP: a IA cria, roda, vê os erros e entrega." /></a></td>
-<td valign="top"><a href="https://forum.creativezone.pro/"><img src="./cards/creativezone.svg" width="420" alt="CreativeZone: Fórum e plataforma da comunidade: discussões que viram projetos." /></a></td>
+<td valign="top"><a href="https://github.com/Miguel-Creative/CreativeLovable"><img src="./cards/creative-lovable.svg" width="420" alt="Creative Lovable: Ambiente de criação para agentes de IA via MCP — do código ao preview e à validação." /></a></td>
+<td valign="top"><a href="https://forum.creativezone.pro/"><img src="./cards/creativezone.svg" width="420" alt="CreativeZone: Comunidade e plataforma de tecnologia onde conversas evoluem para ideias, projetos e colaboração." /></a></td>
 </tr>
 <tr>
-<td valign="top"><a href="https://crm.lollahair.com/"><img src="./cards/meu-salao.svg" width="420" alt="Meu Salão: SaaS vertical multi-salão para gerir salões de beleza na web e no celular." /></a></td>
-<td valign="top"><img src="./cards/linkou.svg" width="420" alt="Linkou: Sua IA operando sua infraestrutura: MCP remoto para PCs, servidores e VPS." /></td>
+<td valign="top"><a href="https://crm.lollahair.com/"><img src="./cards/meu-salao.svg" width="420" alt="Meu Salão: Plataforma de gestão para salões de beleza — agenda, equipe, serviços e operação em um só lugar." /></a></td>
+<td valign="top"><a href="https://github.com/Miguel-Creative/linkou-agent-mcp-remote"><img src="./cards/linkou.svg" width="420" alt="Linkou: Infraestrutura remota para que agentes de IA operem computadores, servidores e VPS com controles de segurança." /></a></td>
 </tr>
 </table>
 
@@ -75,7 +75,7 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-miguel017-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/miguel017/)
 [![Instagram](https://img.shields.io/badge/Instagram-ofc.quiroz-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/ofc.quiroz/)
 [![E-mail](https://img.shields.io/badge/E--mail-gestao.quiroz@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gestao.quiroz@gmail.com)
-[![Live Terminal](https://img.shields.io/badge/⚡_Live_Terminal-CREATIVE_ZONE-22d3ee?style=for-the-badge&logo=gnometerminal&logoColor=black)](https://miguel-creative.github.io)
+[![Live Terminal](https://img.shields.io/badge/⚡_Live_Terminal-CREATIVE_ZONE-22d3ee?style=for-the-badge&logo=gnometerminal&logoColor=black)](https://miguel-creative.github.io/)
 
 <br>
 <br>

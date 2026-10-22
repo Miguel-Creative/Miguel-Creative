@@ -3,23 +3,23 @@
   "login": "Miguel-Creative",
   "name": "Miguel",
   "prompt_user": "miguel@creativezone",
-  "role": "Desenvolvedor Full Stack",
+  "role": "Desenvolvedor Full-Stack",
   "founder_of": "Fundador da Creative Zone",
   "typing": [
-    "Desenvolvedor Full Stack",
+    "Desenvolvedor Full-Stack",
     "Fundador da Creative Zone",
-    "Servidores MCP que dão ferramentas reais para IAs",
-    "SaaS do banco de dados ao app mobile"
+    "IA aplicada · MCP · automação",
+    "Do banco de dados à infraestrutura"
   ],
   "about": {
     "paragraphs": [
-      "Construo produtos de ponta a ponta: do Postgres com RLS ao app Android, passando por servidores MCP que deixam a IA criar, testar e operar software de verdade.",
-      "Fundei a Creative Zone, organização e comunidade onde uma discussão vira ideia e uma ideia vira projeto, reunindo gente de áreas diferentes para construir junto."
+      "Desenho e construo produtos digitais de ponta a ponta — da arquitetura PostgreSQL/RLS às interfaces web, apps mobile e agentes de IA. Integro MCP, automação e infraestrutura para transformar fluxos complexos em ferramentas úteis e operáveis.",
+      "Sou fundador da Creative Zone, um ecossistema de tecnologia e comunidade onde ideias viram software, produtos e colaboração. Trabalho com foco em engenharia pragmática, segurança, experiência de uso e entrega contínua."
     ],
     "facts": [
       [
         "foco",
-        "SaaS · IA e MCP · comunidade"
+        "Produtos · IA/MCP · automação"
       ],
       [
         "front",
@@ -35,7 +35,7 @@
       ],
       [
         "agora",
-        "Creative Lovable 1.0 · Linkou · Meu Salão"
+        "Linkou · Meu Salão · Creative Lovable"
       ]
     ]
   },
@@ -47,12 +47,12 @@
       "url": "https://github.com/Miguel-Creative/CreativeLovable",
       "visibility": "público",
       "badge": "MIT · v1.0.0",
-      "tagline": "Laboratório de criação para IAs via MCP: a IA cria, roda, vê os erros e entrega.",
+      "tagline": "Ambiente de criação para agentes de IA via MCP — do código ao preview e à validação.",
       "highlights": [
-        "22 ferramentas MCP via stdio e Streamable HTTP",
-        "Preview ao vivo, erros com arquivo e linha, versões",
-        "Checagem de JS/JSX (Acorn) e captura via Playwright",
-        "Sandbox, comandos sem shell e anti DNS rebinding"
+        "Ferramentas MCP para criar e operar projetos",
+        "Preview ao vivo e diagnóstico de erros",
+        "Validação de código e captura via Playwright",
+        "Sandbox e controles de segurança"
       ],
       "tech": [
         "Node.js",
@@ -69,12 +69,12 @@
       "url": "https://forum.creativezone.pro/",
       "visibility": "público",
       "badge": "forum.creativezone.pro",
-      "tagline": "Fórum e plataforma da comunidade: discussões que viram projetos.",
+      "tagline": "Comunidade e plataforma de tecnologia onde conversas evoluem para ideias, projetos e colaboração.",
       "highlights": [
-        "Chat realtime com presença, moderação e anti-flood",
-        "DevHub com GitHub App e Security Score via OSV.dev",
-        "Link preview próprio com cache e proteção SSRF",
-        "113 migrations com RLS, 14 Edge Functions e PWA"
+        "Comunidade com chat em tempo real e moderação",
+        "DevHub integrado ao ecossistema GitHub",
+        "Pré-visualização de links com proteção SSRF",
+        "Base Supabase/Postgres com políticas RLS"
       ],
       "tech": [
         "React 19",
@@ -88,16 +88,16 @@
     {
       "slug": "meu-salao",
       "name": "Meu Salão",
-      "repo": "Miguel-Creative/Lolla-Salao",
+      "repo": "Miguel-Creative/Meu-Salao",
       "url": "https://crm.lollahair.com/",
       "visibility": "privado",
       "badge": "beta operacional",
-      "tagline": "SaaS vertical multi-salão para gerir salões de beleza na web e no celular.",
+      "tagline": "Plataforma de gestão para salões de beleza — agenda, equipe, serviços e operação em um só lugar.",
       "highlights": [
-        "Agenda drag-and-drop, comandas, sinal PIX, comissões",
-        "Multi-tenant isolado por salão, auditoria e backups",
-        "Painel admin com feature flags e kill switches",
-        "Android/iOS com Capacitor e assinaturas RevenueCat"
+        "Agenda, comandas, pagamentos e comissões",
+        "Dados isolados por salão e controles de acesso",
+        "Gestão operacional e financeira",
+        "Experiência web e aplicativo mobile"
       ],
       "tech": [
         "TypeScript",
@@ -111,15 +111,15 @@
       "slug": "linkou",
       "name": "Linkou",
       "repo": "Miguel-Creative/linkou-agent-mcp-remote",
-      "url": "",
+      "url": "https://github.com/Miguel-Creative/linkou-agent-mcp-remote",
       "visibility": "privado",
       "badge": "monorepo pnpm",
-      "tagline": "Sua IA operando sua infraestrutura: MCP remoto para PCs, servidores e VPS.",
+      "tagline": "Infraestrutura remota para que agentes de IA operem computadores, servidores e VPS com controles de segurança.",
       "highlights": [
-        "Gateway MCP + WebSocket e agentes Windows/Linux",
-        "Tiers de segurança, RBAC, aprovação e auditoria",
-        "Terminal remoto, workflows e ponte OpenAPI p/ GPTs",
-        "Instalador de 1 linha, vault AES-256, Docker + Caddy"
+        "Gateway MCP e agentes Windows/Linux",
+        "Aprovação, permissões e trilha de auditoria",
+        "Terminal remoto e execução de tarefas",
+        "Integração com servidores e ambientes próprios"
       ],
       "tech": [
         "TypeScript",
@@ -187,7 +187,7 @@
   ],
   "community": {
     "name": "Creative Zone",
-    "subtitle": "Comunidade Creative Lab",
+    "subtitle": "Tecnologia · IA · Software · Colaboração",
     "role": "Fundador",
     "description": "Comunidade de tecnologia, software, automação, IA, infraestrutura, hardware e games, feita para ir além do fórum: uma discussão vira ideia, a ideia vira projeto e o projeto reúne membros de áreas diferentes.",
     "features": [
@@ -206,6 +206,6 @@
     "instagram": "https://www.instagram.com/ofc.quiroz/",
     "instagram_label": "ofc.quiroz",
     "email": "gestao.quiroz@gmail.com",
-    "terminal": "https://miguel-creative.github.io"
+    "terminal": "https://miguel-creative.github.io/"
   }
 }
