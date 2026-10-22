@@ -46,67 +46,54 @@ def esc(s: str) -> str:
 
 def render_header() -> str:
     W, H = 860, 252
-    fs = 13
-    cw = fs * 0.6
-    bw = max(len(l) for l in BANNER) * cw
-    bx, by = (W - bw) / 2, 66
-    lh = 16.5
-    scan_dur, scan_begin = 3.2, 0.5
-    banner = "".join(
-        f'<text class="bn" x="{bx:.1f}" y="{by + i * lh:.1f}" xml:space="preserve">{esc(l)}</text>' for i, l in enumerate(BANNER)
+    # Premium geometric wordmark: a real, clearly legible Z instead of the old ASCII-art glyphs.
+    wordmark = (
+        f'<defs><filter id="wordGlow" x="-20%" y="-50%" width="140%" height="200%">'
+        f'<feGaussianBlur stdDeviation="3.5" result="blur"/>'
+        f'<feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>'
+        f'<text class="wordmark" x="{W/2}" y="105" text-anchor="middle" filter="url(#wordGlow)">CREATIVE ZONE</text>'
+        f'<text class="wordmarkShade" x="{W/2}" y="105" text-anchor="middle">CREATIVE ZONE</text>'
     )
-    bh = len(BANNER) * lh
-    scan = (
-        f'<clipPath id="bclip"><rect x="{bx - 4:.1f}" y="{by - 14}" width="0" height="{bh + 8:.1f}">'
-        f'<animate attributeName="width" from="0" to="{bw + 8:.1f}" begin="{scan_begin}s" dur="{scan_dur}s" fill="freeze"/></rect></clipPath>'
-        f'<g clip-path="url(#bclip)">{banner}</g>'
-        f'<g opacity="0"><animate attributeName="opacity" values="1;1;0" keyTimes="0;.9;1" begin="{scan_begin}s" dur="{scan_dur + .3}s" fill="freeze"/>'
-        f'<rect x="{bx - 4:.1f}" y="{by - 18}" width="2" height="{bh + 14:.1f}" fill="{GREEN}" filter="url(#gl)">'
-        f'<animate attributeName="x" from="{bx - 4:.1f}" to="{bx + bw + 4:.1f}" begin="{scan_begin}s" dur="{scan_dur}s" fill="freeze"/></rect></g>'
-    )
-    sub_y = by + bh + 14
-    who = f'{CONTENT["name"]} · {CONTENT["role"]} · {CONTENT["founder_of"]}'
-    sub = (f'<text class="sub fade" style="animation-delay:{scan_begin + scan_dur:.1f}s" x="{W/2}" y="{sub_y:.1f}" text-anchor="middle">{esc(who)}</text>')
-
-    # typed roles: one shared timeline, discrete steps
+    who = f'{CONTENT["name"]} Ã‚Â· {CONTENT["role"]} Ã‚Â· {CONTENT["founder_of"]}'
+    sub = f'<text class="sub" x="{W/2}" y="143" text-anchor="middle">{esc(who)}</text>'
+    # Typed roles remain animated, but the new wordmark has clean typography and more breathing room.
     lines = CONTENT["typing"]
     tfs, tcw = 17, 17 * 0.6
-    tx = 64
-    ty = H - 34
+    tx, ty = 64, H - 34
     type_dt, del_dt, hold, gap = 0.075, 0.03, 2.4, 0.45
-    events = []  # (time, line_index, chars)
+    events = []
     t = 0.0
-    for i, l in enumerate(lines):
-        for k in range(len(l) + 1):
+    for i, line in enumerate(lines):
+        for k in range(len(line) + 1):
             events.append((t, i, k)); t += type_dt
         t += hold
-        for k in range(len(l), -1, -1):
+        for k in range(len(line), -1, -1):
             events.append((t, i, k)); t += del_dt
         t += gap
     cycle = t
-    begin = scan_begin + scan_dur + 0.6
+    begin = 1.2
     kts = ";".join(f"{e[0] / cycle:.5f}" for e in events)
     texts = []
-    for i, l in enumerate(lines):
+    for i, line in enumerate(lines):
         vals = ";".join(f"{(e[2] * tcw + (1 if e[2] else 0)) if e[1] == i else 0:.1f}" for e in events)
         texts.append(
             f'<clipPath id="t{i}"><rect x="{tx}" y="{ty - 20}" width="0" height="28">'
             f'<animate attributeName="width" values="{vals}" keyTimes="{kts}" calcMode="discrete" begin="{begin:.2f}s" dur="{cycle:.2f}s" repeatCount="indefinite"/></rect></clipPath>'
-            f'<text class="ty" clip-path="url(#t{i})" x="{tx}" y="{ty}">{esc(l)}</text>'
+            f'<text class="ty" clip-path="url(#t{i})" x="{tx}" y="{ty}">{esc(line)}</text>'
         )
     curx = ";".join(f"{tx + e[2] * tcw + 2:.1f}" for e in events)
     cursor = (f'<rect class="cur" x="{tx + 2}" y="{ty - 15}" width="9" height="19" fill="{GREEN}">'
               f'<animate attributeName="x" values="{curx}" keyTimes="{kts}" calcMode="discrete" begin="{begin:.2f}s" dur="{cycle:.2f}s" repeatCount="indefinite"/></rect>')
-    prompt = f'<text class="pp" x="{tx - 26}" y="{ty}">❯</text>'.replace("❯", "&gt;")
-    defs = (f'<defs><filter id="gl" x="-200%" y="-20%" width="500%" height="140%"><feGaussianBlur stdDeviation="2.4"/>'
-            f'<feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>')
-    sep = f'<line x1="40" y1="{ty - 32}" x2="{W - 40}" y2="{ty - 32}" stroke="{BORDER}" stroke-dasharray="2 4"/>'
-    css = (f".bn{{fill:{GREEN};font-size:{fs}px;font-weight:700;white-space:pre}}"
-           f".sub{{fill:{MUTED};font-size:13px}}.ty{{fill:{TEXT};font-size:{tfs}px;font-weight:700}}.pp{{fill:{GREEN};font-size:{tfs}px;font-weight:700}}"
-           ".fade{opacity:0;animation:fi 1.2s ease-out forwards}@keyframes fi{to{opacity:1}}"
-           ".cur{animation:bl 1.05s steps(1) infinite}@keyframes bl{50%{opacity:0}}")
-    body = defs + scan + sub + sep + prompt + "".join(texts) + cursor
-    chars = "".join(BANNER) + who + "".join(lines) + ">"
+    prompt = f'<text class="pp" x="{tx - 26}" y="{ty}">&gt;</text>'
+    sep = f'<line x1="40" y1="174" x2="{W - 40}" y2="174" stroke="{BORDER}" stroke-dasharray="2 4"/>'
+    css = (
+        f".wordmark{{font-family:'Arial Black',Arial,Helvetica,sans-serif;font-size:49px;font-weight:900;letter-spacing:4px;fill:{GREEN};stroke:{GREEN};stroke-width:.65;paint-order:stroke;}}"
+        f".wordmarkShade{{font-family:Arial,Helvetica,sans-serif;font-size:49px;font-weight:900;letter-spacing:4px;fill:none;stroke:#b7ffc4;stroke-width:.35;opacity:.7;}}"
+        f".sub{{fill:{MUTED};font-size:13px}}.ty{{fill:{TEXT};font-size:{tfs}px;font-weight:700}}.pp{{fill:{GREEN};font-size:{tfs}px;font-weight:700}}"
+        ".cur{animation:bl 1.05s steps(1) infinite}@keyframes bl{50%{opacity:0}}"
+    )
+    chars = who + "".join(lines) + "CREATIVE ZONE"
+    body = wordmark + sub + sep + prompt + "".join(texts) + cursor
     return window(W, H, f"{P}: ~", body, style=css, chars=chars,
                   desc=f"CREATIVE ZONE. {who}")
 
@@ -134,14 +121,16 @@ def render_about() -> str:
     add(f'<line x1="{x}" y1="{y - 4}" x2="{W - x}" y2="{y - 4}" stroke="{BORDER}" stroke-dasharray="2 4"/>', 16)
     for ptxt in a["paragraphs"]:
         ls = wrap(ptxt, 52)
-        block = "".join(f'<text class="pg" x="{x}" y="{y + i * 17:.0f}">{esc(l)}</text>' for i, l in enumerate(ls))
+        block = "".join(f'<text class="pg" x="{x}" y="{y + i * 17:.0f}">{esc(line)}</text>' for i, line in enumerate(ls))
         add(block, len(ls) * 17 + 9)
         chars += ptxt
     y += 2
     for k, v in a["facts"]:
-        add(f'<text class="fk" x="{x}" y="{y}">› {esc(k)}</text><text class="fv" x="{x + 64}" y="{y}">{esc(v)}</text>', 19)
-        chars += k + v + "›"
-    py = H - 24
+        add(f'<text class="fk" x="{x}" y="{y}">Ã¢â‚¬Âº {esc(k)}</text><text class="fv" x="{x + 64}" y="{y}">{esc(v)}</text>', 19)
+        chars += k + v + "Ã¢â‚¬Âº"
+    # Footer follows the final row instead of using a fixed baseline that could collide with facts.
+    py = max(H - 24, y + 18)
+    H = max(H, int(py + 16))
     parts.append(f'<g class="ln" style="animation-delay:{0.5 + seq * 0.32:.2f}s"><text class="pr" x="{x}" y="{py}"><tspan class="pgr">{esc(P)}</tspan>:~$ </text>'
                  f'<rect class="cur" x="{x + 7.2 * (len(P) + 4):.0f}" y="{py - 11}" width="7.5" height="14" fill="{TEXT}"/></g>')
     chars += P + ":~$ "
