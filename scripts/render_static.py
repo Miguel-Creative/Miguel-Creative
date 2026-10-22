@@ -52,7 +52,6 @@ def render_header() -> str:
         f'<feGaussianBlur stdDeviation="3.5" result="blur"/>'
         f'<feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>'
         f'<text class="wordmark" x="{W/2}" y="105" text-anchor="middle" filter="url(#wordGlow)">CREATIVE ZONE</text>'
-        f'<text class="wordmarkShade" x="{W/2}" y="105" text-anchor="middle">CREATIVE ZONE</text>'
     )
     who = f'{CONTENT["name"]} · {CONTENT["role"]} · {CONTENT["founder_of"]}'
     sub = f'<text class="sub" x="{W/2}" y="143" text-anchor="middle">{esc(who)}</text>'
@@ -87,7 +86,7 @@ def render_header() -> str:
     prompt = f'<text class="pp" x="{tx - 26}" y="{ty}">&gt;</text>'
     sep = f'<line x1="40" y1="174" x2="{W - 40}" y2="174" stroke="{BORDER}" stroke-dasharray="2 4"/>'
     css = (
-        f".wordmark{{font-family:'Arial Black',Arial,Helvetica,sans-serif;font-size:49px;font-weight:900;letter-spacing:4px;fill:{GREEN};stroke:{GREEN};stroke-width:.65;paint-order:stroke;}}"
+        f".wordmark{{font-family:'CZ Mono',monospace;font-size:39px;font-weight:700;letter-spacing:1.5px;fill:{GREEN};stroke:none;paint-order:normal;}}"
         f".wordmarkShade{{font-family:Arial,Helvetica,sans-serif;font-size:49px;font-weight:900;letter-spacing:4px;fill:none;stroke:#b7ffc4;stroke-width:.35;opacity:.7;}}"
         f".sub{{fill:{MUTED};font-size:13px}}.ty{{fill:{TEXT};font-size:{tfs}px;font-weight:700}}.pp{{fill:{GREEN};font-size:{tfs}px;font-weight:700}}"
         ".cur{animation:bl 1.05s steps(1) infinite}@keyframes bl{50%{opacity:0}}"
