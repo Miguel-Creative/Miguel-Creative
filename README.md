@@ -1,7 +1,3 @@
-# CREATIVE ZONE — Miguel
-
-Desenvolvedor Full Stack e fundador da Creative Zone. Construo produtos de ponta a ponta: software, dados, automação, IA e infraestrutura.
-
 <!--
   Este README é gerado por scripts/render_static.py a partir de content/profile.json.
   Para mudar textos, projetos, stack ou links, edite content/profile.json: o GitHub Actions
