@@ -1,0 +1,65 @@
+name: atualizar arte do perfil
+
+on:
+  schedule:
+    - cron: "17 3 * * *"   # todo dia, 00:17 no horário de Brasília
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "content/**"
+      - "scripts/**"
+      - "assets/**"
+      - ".github/workflows/update-profile-art.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-art
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: instalar dependências
+        run: pip install --quiet fonttools brotli pillow
+
+      - name: contribuições, estatísticas e linguagens
+        env:
+          # PROFILE_TOKEN (opcional): token pessoal para incluir contribuições privadas
+          GH_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+          GH_LOGIN: ${{ github.repository_owner }}
+        run: python scripts/update_profile_art.py
+
+      - name: cabeçalho, sobre, projetos, stack, comunidade e README
+        run: python scripts/render_static.py
+
+      - name: cobrinha (Platane/snk)
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-raw.svg?color_snake=#e6edf3&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
+
+      - name: moldura da cobrinha
+        run: python scripts/snake_panel.py
+
+      - name: salvar no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md header.svg about.svg stack.svg community.svg cards contrib-heatmap.svg stats.svg stats.json dist/snake.svg
+          if git diff --cached --quiet; then
+            echo "nada mudou"
+          else
+            git commit -m "chore: atualiza arte do perfil"
+            git push
+          fi
