@@ -39,7 +39,7 @@ jobs:
           GH_LOGIN: ${{ github.repository_owner }}
         run: python scripts/update_profile_art.py
 
-      - name: cabeçalho, sobre, projetos, stack, comunidade e README
+      - name: gerar SVGs e README estilo Playbook sem alterar os dados
         run: python scripts/render_static.py
 
       - name: cobrinha (Platane/snk)
@@ -47,7 +47,7 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake-raw.svg?color_snake=#e6edf3&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
+            dist/snake-raw.svg?color_snake=#f3f6ff&color_dots=#101b2e,#16345a,#2055a1,#247bff,#73a9ff
 
       - name: moldura da cobrinha
         run: python scripts/snake_panel.py
@@ -56,7 +56,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md header.svg about.svg stack.svg community.svg cards contrib-heatmap.svg stats.svg stats.json dist/snake.svg
+          git add README.md header.svg about.svg stack.svg community.svg cards contrib-heatmap.svg stats.svg stats.json dist/snake.svg assets/hero.svg assets/about-life.svg assets/stack.svg assets/id-dashboard.svg assets/connect.svg
           if git diff --cached --quiet; then
             echo "nada mudou"
           else
