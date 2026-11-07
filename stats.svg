@@ -178,7 +178,7 @@
     <circle class="rank-ring" r="48" fill="none" stroke="url(#neon-cyan-green)" stroke-width="9" stroke-linecap="round" transform="rotate(-90)" filter="url(#subtle-glow)"/>
 
     <!-- Central Grade Label Core -->
-    <text class="txt-sans" font-size="36" font-weight="900" fill="#ffffff" x="0" y="12" text-anchor="middle" letter-spacing="0.5">S+</text>
+    <text class="txt-sans" font-size="36" font-weight="900" fill="#ffffff" x="0" y="12" text-anchor="middle" letter-spacing="0.5">CZ</text>
 
     <!-- Overall Rank Text Identifier Underneath -->
     <text class="txt-mono" font-size="11" font-weight="800" fill="#00ff9d" x="0" y="80" text-anchor="middle" letter-spacing="2">CREATIVE_ZONE</text>
@@ -188,7 +188,7 @@
   <!-- ================= BOTTOM TELEMETRY FOOTER ================= -->
   <g transform="translate(35, 388)" class="txt-mono" font-size="9.5" font-weight="700">
     <text fill="#64748b">CORE: <tspan fill="#00f3ff">NODE.JS / REACT</tspan></text>
-    <text x="140" fill="#64748b">GRAPHICS: <tspan fill="#00ff9d">AI / MCP / AGENTS</tspan></text>
+    <text x="140" fill="#64748b">AI / MCP: <tspan fill="#00ff9d">AI / MCP / AGENTS</tspan></text>
     <text x="310" fill="#64748b">STATE: <tspan fill="#f8fafc">FULL-STACK</tspan></text>
     <text x="440" fill="#64748b">SECURITY: <tspan fill="#00ff9d">RLS / AUTH</tspan></text>
   </g>
