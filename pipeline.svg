@@ -154,11 +154,11 @@
     </g>
   </g>
 
-  <!-- ================= NODE 2: 3D WEBGL SHADER ENGINE ================= -->
+  <!-- ================= NODE 2: AI AND MCP AGENTS ENGINE ================= -->
   <g transform="translate(255, 80)">
     <rect width="180" height="200" rx="14" fill="url(#node-box-1)" stroke="#00ff9d" stroke-width="1.5" filter="url(#pipe-glow)"/>
     <rect x="15" y="15" width="22" height="22" rx="6" fill="#022c22"/>
-    <text class="txt-mono" font-size="12" font-weight="800" fill="#00ff9d" x="20" y="31">3D</text>
+    <text class="txt-mono" font-size="12" font-weight="800" fill="#00ff9d" x="20" y="31">AI</text>
     
     <text class="txt-mono" font-size="9" font-weight="700" fill="#64748b" x="45" y="24" letter-spacing="1">LAYER 02</text>
     <text class="txt-sans" font-size="12" font-weight="800" fill="#ffffff" x="45" y="38">AI / MCP AGENTS</text>
