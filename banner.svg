@@ -128,7 +128,7 @@
     
     <!-- Senior Sub-Headline -->
     <text class="font-mono" font-size="14" font-weight="800" fill="#00ff9d" y="90" letter-spacing="2.5">FULL-STACK DEVELOPER // AI + MCP + AUTOMATION</text>
-    <text class="font-sans" font-size="14" font-weight="500" fill="#94a3b8" y="116">Specializing in high-performance distributed systems, WebGL shaders, and ultra-responsive full-stack ecosystems.</text>
+    <text class="font-sans" font-size="14" font-weight="500" fill="#94a3b8" y="116">Building full-stack products with automation, AI agents, MCP and reliable infrastructure.</text>
   </g>
 
   <!-- ================= LEFT COLUMN: ADVANCED CODE WINDOW ================= -->
@@ -142,7 +142,7 @@
     <circle cx="36" cy="17" r="4.5" fill="#f59e0b"/>
     <circle cx="52" cy="17" r="4.5" fill="#10b981"/>
     <text class="font-mono" font-size="11" font-weight="600" fill="#64748b" x="75" y="21" letter-spacing="1">~/creative_zone_profile.ts — FULL-STACK</text>
-    <text class="font-mono" font-size="10" font-weight="700" fill="#00ff9d" x="720" y="21">[TypeScript.x]</text>
+    <text class="font-mono" font-size="10" font-weight="700" fill="#00ff9d" x="720" y="21">[TypeScript]</text>
 
     <!-- Syntax-Highlighted Code Editor Content -->
     <g transform="translate(25, 60)" class="font-mono" font-size="13" font-weight="600">
@@ -156,7 +156,7 @@
 
       <text y="96" x="20"><tspan fill="#94a3b8">architectureTenet:</tspan> <tspan fill="#f59e0b">"Build practical products connecting data, interfaces and automation"</tspan><tspan fill="#ffffff">;</tspan></text>
 
-      <text y="120" x="20"><tspan fill="#94a3b8">runtimeMetrics:</tspan> <tspan fill="#ffffff">{ </tspan><tspan fill="#94a3b8">reliability:</tspan> <tspan fill="#00ff9d">"11 PUBLIC+PRIVATE SLA"</tspan><tspan fill="#ffffff">, </tspan><tspan fill="#94a3b8">frameBudget:</tspan> <tspan fill="#00f3ff">"React / Node / MCP"</tspan><tspan fill="#ffffff">, </tspan><tspan fill="#94a3b8">contributions:</tspan> <tspan fill="#f59e0b">"107"</tspan> <tspan fill="#ffffff">};</tspan></text>
+      <text y="120" x="20"><tspan fill="#94a3b8">runtimeMetrics:</tspan> <tspan fill="#ffffff">{ </tspan><tspan fill="#94a3b8">reliability:</tspan> <tspan fill="#00ff9d">"11 GitHub repositories"</tspan><tspan fill="#ffffff">, </tspan><tspan fill="#94a3b8">frameBudget:</tspan> <tspan fill="#00f3ff">"React / Node / MCP"</tspan><tspan fill="#ffffff">, </tspan><tspan fill="#94a3b8">contributions:</tspan> <tspan fill="#f59e0b">"107"</tspan> <tspan fill="#ffffff">};</tspan></text>
 
       <text y="144"><tspan fill="#ffffff">}</tspan></text>
 
@@ -207,7 +207,7 @@
 
       <rect x="215" width="195" height="36" rx="6" fill="#082f49" stroke="#38bdf8" stroke-width="1"/>
       <text class="font-mono" font-size="9" font-weight="700" fill="#64748b" x="227" y="15">CONTRIBUTIONS</text>
-      <text class="font-mono" font-size="13" font-weight="800" fill="#38bdf8" x="227" y="30">107 Commits</text>
+      <text class="font-mono" font-size="13" font-weight="800" fill="#38bdf8" x="227" y="30">107 Contributions</text>
 
       <rect y="46" width="195" height="36" rx="6" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
       <text class="font-mono" font-size="9" font-weight="700" fill="#64748b" x="12" y="61">AI AGENTS</text>
@@ -215,7 +215,7 @@
 
       <rect x="215" y="46" width="195" height="36" rx="6" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
       <text class="font-mono" font-size="9" font-weight="700" fill="#64748b" x="227" y="61">INFRA STACK</text>
-      <text class="font-mono" font-size="13" font-weight="800" fill="#00ff9d" x="227" y="76">11 PUBLIC+PRIVATE Guaranteed</text>
+      <text class="font-mono" font-size="13" font-weight="800" fill="#00ff9d" x="227" y="76">Docker / Linux / VPS</text>
     </g>
   </g>
 
@@ -223,7 +223,7 @@
   <g transform="translate(50, 555)">
     <text class="font-mono" font-size="13" font-weight="800" fill="#00f3ff" letter-spacing="1.5">&lt;/&gt; CORE PRODUCTION TECH ARSENAL</text>
 
-    <!-- Row 1: Frontend & 3D WebGL -->
+    <!-- Row 1: Frontend & 3D AI / MCP -->
     <g transform="translate(0, 20)">
       <rect width="115" height="32" rx="8" fill="#0a1224" stroke="url(#glass-edge)" stroke-width="1"/>
       <text class="font-mono" font-size="11.5" font-weight="700" fill="#38bdf8" x="57.5" y="20" text-anchor="middle">React</text>
@@ -297,7 +297,7 @@
     <text class="font-mono" font-size="12" font-weight="700" fill="#00ff9d" x="25" y="30" letter-spacing="1">AUTHENTICATED COMMS CHANNELS</text>
     
     <g transform="translate(25, 62)" class="font-mono" font-size="12.5" font-weight="700">
-      <text fill="#ffffff">PORTFOLIO: <tspan fill="#00f3ff">miguel-creative.github.io</tspan></text>
+      <text fill="#ffffff">LIVE SITE: <tspan fill="#00f3ff">miguel-creative.github.io</tspan></text>
       <text x="510" fill="#ffffff">LINKEDIN: <tspan fill="#38bdf8">miguel017</tspan></text>
     </g>
 
@@ -307,7 +307,7 @@
       <g transform="translate(20, 32)" class="font-mono" font-size="12.5">
         <text fill="#64748b">STATUS: <tspan fill="#00ff9d">BUILDING REAL PRODUCTS &amp; TOOLS</tspan></text>
         <text y="24" fill="#94a3b8">MOTTO: <tspan fill="#ffffff">"Connecting ideas, software and collaboration."</tspan></text>
-        <text y="46" fill="#38bdf8">ENCRYPT: <tspan fill="#64748b">GITHUB // VERIFIED PROFILE</tspan></text>
+        <text y="46" fill="#38bdf8">SOURCE: <tspan fill="#64748b">GITHUB // VERIFIED PROFILE</tspan></text>
       </g>
     </g>
   </g>
