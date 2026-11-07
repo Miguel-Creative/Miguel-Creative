@@ -459,8 +459,7 @@ def main():
         (ROOT / "cards" / f"{pj['slug']}.svg").write_text(render_card(pj, hmax), encoding="utf-8")
     (ROOT / "stack.svg").write_text(render_stack(), encoding="utf-8")
     (ROOT / "community.svg").write_text(render_community(), encoding="utf-8")
-    from render_playbook import main as render_playbook
-    render_playbook()  # generates redesigned README and five self-contained SVGs
+    (ROOT / "README.md").write_text(render_readme(cards), encoding="utf-8")
     print(f"ok: header, about, {len(cards)} cards (h={hmax}), stack, community, README")
 
 

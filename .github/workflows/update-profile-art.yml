@@ -1,4 +1,4 @@
-name: atualizar métricas e contribuições do perfil
+name: atualizar arte do perfil
 
 on:
   schedule:
@@ -9,6 +9,7 @@ on:
     paths:
       - "content/**"
       - "scripts/**"
+      - "assets/**"
       - ".github/workflows/update-profile-art.yml"
 
 permissions:
@@ -38,12 +39,15 @@ jobs:
           GH_LOGIN: ${{ github.repository_owner }}
         run: python scripts/update_profile_art.py
 
+      - name: cabeçalho, sobre, projetos, stack, comunidade e README
+        run: python scripts/render_static.py
+
       - name: cobrinha (Platane/snk)
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake-raw.svg?color_snake=#f3f6ff&color_dots=#101b2e,#16345a,#2055a1,#247bff,#73a9ff
+            dist/snake-raw.svg?color_snake=#e6edf3&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
 
       - name: moldura da cobrinha
         run: python scripts/snake_panel.py
@@ -52,7 +56,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add contrib-heatmap.svg stats.json dist/snake.svg
+          git add README.md header.svg about.svg stack.svg community.svg cards contrib-heatmap.svg stats.svg stats.json dist/snake.svg
           if git diff --cached --quiet; then
             echo "nada mudou"
           else

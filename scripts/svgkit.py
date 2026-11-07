@@ -21,14 +21,14 @@ FONT_FILES = {
 FONT_STACK = "'CZ Mono', 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
 
 # palette (GitHub dark + CREATIVE ZONE accent)
-BG = "#070b16"
-PANEL = "#101b2e"
-BORDER = "#294464"
-TEXT = "#f3f6ff"
-MUTED = "#aabbd0"
-DIM = "#7789a6"
-GREEN = "#247bff"
-GREENS = ["#101b2e", "#16345a", "#2055a1", "#247bff", "#73a9ff"]
+BG = "#0d1117"
+PANEL = "#161b22"
+BORDER = "#30363d"
+TEXT = "#e6edf3"
+MUTED = "#8b949e"
+DIM = "#6e7681"
+GREEN = "#39d353"
+GREENS = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
 
 
 def font_face(chars: str, weights=(400, 700)) -> str:
